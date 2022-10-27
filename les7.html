@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>figures</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        .body{
+            height: 100vh;
+        }
+        .block{
+            padding: 50px;
+            max-width: 120px;
+            margin: 0 auto;
+        }
+        .block-item{
+            margin-bottom: 30px;
+        }
+        .square{
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+        }
+        .triangle{
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 200px solid goldenrod;
+        }
+        .parallelagramm{
+            width: 300px;
+            height: 150px;
+            background-color: rosybrown;
+            transform: skew(-15deg);
+        }
+        .star1{
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 200px solid darkolivegreen;
+            position: relative;
+        }
+        .star1::after{
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-top: 200px solid darkolivegreen;
+            position: absolute;
+            content: "";
+            top: 60px;
+            left: -100px;
+        }
+        .star2{
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid lightcoral;
+            position: relative;
+            transform: rotate(35deg) translateY(100px);
+        }
+        .star2::after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid lightcoral;
+            position: absolute;
+            top: 3px;
+            left: -105px;
+            transform: rotate(-70deg);
+        }
+        .star2::before{
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 80px solid lightcoral;
+            position: absolute;
+            top: -45px;
+            left: -65px;
+            transform: rotate(-35deg);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="block">
+            <div class="block-item">
+                <div class="square"></div>
+                <div class="triangle"></div>
+                <div class="parallelagramm"></div>
+                <div class="star1"></div>
+                <div class="star2"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
